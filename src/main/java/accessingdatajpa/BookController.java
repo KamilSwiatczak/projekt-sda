@@ -21,8 +21,9 @@ public class BookController {
     public @ResponseBody Iterable<Book> allBooks() {
         return repository.findAll();
     }
+
     @RequestMapping(path="/books",method=POST)
-    public @ResponseBody Book addBook(@RequestBody() String isbn, @RequestBody String author, @RequestBody String title) {
-        return repository.save(new Book(isbn,author,title));
+    public @ResponseBody Book addBook(@RequestBody Book book) {
+        return repository.save(book);
     }
 }

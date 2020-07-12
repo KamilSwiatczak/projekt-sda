@@ -39,7 +39,7 @@ public class Book {
         return id;
     }
 
-    public String isbn() { return isbn; }
+    public String getIsbn() { return isbn; }
 
     public String getAuthor() {
         return author;
