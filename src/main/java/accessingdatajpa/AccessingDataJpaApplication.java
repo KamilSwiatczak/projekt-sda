@@ -17,34 +17,34 @@ public class AccessingDataJpaApplication {
     }
 
     @Bean
-    public CommandLineRunner demo(CustomerRepository repository) {
+    public CommandLineRunner demo(BookRepository repository) {
         return (args) -> {
             // save a few customers
-            repository.save(new Customer("Jack", "Bauer"));
-            repository.save(new Customer("Chloe", "O'Brian"));
-            repository.save(new Customer("Kim", "Bauer"));
-            repository.save(new Customer("David", "Palmer"));
-            repository.save(new Customer("Michelle", "Dessler"));
+            repository.save(new Book("Jo Nesbo", "Upiory"));
+            repository.save(new Book("Tess Gerristen", "Chirurg"));
+            repository.save(new Book("Robert Galbraith", "Jedwabnik"));
+            repository.save(new Book("J. K. Rowling", "Harry Potter"));
+            repository.save(new Book("Carlos Ruis Zafon", "Marina"));
 
             // fetch all customers
             log.info("Customers found with findAll():");
             log.info("-------------------------------");
-            for (Customer customer : repository.findAll()) {
+            for (Book customer : repository.findAll()) {
                 log.info(customer.toString());
             }
             log.info("");
 
-            // fetch an individual customer by ID
-            Customer customer = repository.findById(1L);
-            log.info("Customer found with findById(1L):");
+            // fetch an individual book by ID
+            Book book = repository.findById(1L);
+            log.info("Book found with findById(1L):");
             log.info("--------------------------------");
-            log.info(customer.toString());
+            log.info(book.toString());
             log.info("");
 
             // fetch customers by last name
-            log.info("Customer found with findByLastName('Bauer'):");
+            log.info("Book found with findByTitle('Harry Potter'):");
             log.info("--------------------------------------------");
-            repository.findByLastName("Bauer").forEach(bauer -> {
+            repository.findByTitle("Bauer").forEach(bauer -> {
                 log.info(bauer.toString());
             });
             // for (Customer bauer : repository.findByLastName("Bauer")) {
