@@ -20,11 +20,11 @@ public class AccessingDataJpaApplication {
     public CommandLineRunner demo(BookRepository repository) {
         return (args) -> {
             // save a few customers
-            repository.save(new Book("Jo Nesbo", "Upiory"));
-            repository.save(new Book("Tess Gerristen", "Chirurg"));
-            repository.save(new Book("Robert Galbraith", "Jedwabnik"));
-            repository.save(new Book("J. K. Rowling", "Harry Potter"));
-            repository.save(new Book("Carlos Ruis Zafon", "Marina"));
+            repository.save(new Book("2929292929", "Jo Nesbo", "Upiory"));
+            repository.save(new Book("8383838383", "Tess Gerristen", "Chirurg"));
+            repository.save(new Book("9449494949", "Robert Galbraith", "Jedwabnik"));
+            repository.save(new Book("995955959", "J. K. Rowling", "Harry Potter"));
+            repository.save(new Book("5959595959", "Carlos Ruis Zafon", "Marina"));
 
             // fetch all customers
             log.info("Customers found with findAll():");
