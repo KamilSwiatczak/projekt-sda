@@ -26,11 +26,11 @@ public class AccessingDataJpaApplication {
             repository.save(new Book("995955959", "J. K. Rowling", "Harry Potter"));
             repository.save(new Book("5959595959", "Carlos Ruis Zafon", "Marina"));
 
-            // fetch all customers
-            log.info("Customers found with findAll():");
+            // fetch all books
+            log.info("Books found with findAll():");
             log.info("-------------------------------");
-            for (Book customer : repository.findAll()) {
-                log.info(customer.toString());
+            for (Book book : repository.findAll()) {
+                log.info(book.toString());
             }
             log.info("");
 
@@ -41,13 +41,13 @@ public class AccessingDataJpaApplication {
             log.info(book.toString());
             log.info("");
 
-            // fetch customers by last name
+            // fetch books by title
             log.info("Book found with findByTitle('Harry Potter'):");
             log.info("--------------------------------------------");
             repository.findByTitle("Bauer").forEach(bauer -> {
                 log.info(bauer.toString());
             });
-            // for (Customer bauer : repository.findByLastName("Bauer")) {
+            // for (Book bauer : repository.findByLastName("Bauer")) {
             // 	log.info(bauer.toString());
             // }
             log.info("");
