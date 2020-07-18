@@ -16,7 +16,7 @@ public class ProjektKsiegarniaApplication {
 public class HelloController {
 		@GetMapping("/")
 	String hello(){
-			return "Tu powinny się pojawić książki, kiedyś uda nam się je dodać.";
+			return "Tu powinny pojawić się książki. Kiedyś uda nam się je dodać ;) ";
 		}
 }
 }
