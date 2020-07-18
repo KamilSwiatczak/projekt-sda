@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RestController;
     public class HelloController {
         @GetMapping("/")
         String hello() {
-            return "Księgarnia coming soon...";
+            return "WITAMY W NAJLEPSZEJ KSIĘGARNI NA ŚWIECIE!";
         }
     }
