@@ -1,4 +1,4 @@
-package accessingdatajpa;
+package sda.projektksiegarnia.book;
 
 import java.util.List;
 

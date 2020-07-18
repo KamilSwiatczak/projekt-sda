@@ -1,4 +1,4 @@
-package accessingdatajpa;
+package sda.projektksiegarnia.book;
 
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.context.annotation.Bean;

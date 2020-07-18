@@ -1,4 +1,4 @@
-package accessingdatajpa;
+package sda.projektksiegarnia.book;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
