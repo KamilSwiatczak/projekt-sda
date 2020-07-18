@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class PageController {
     @GetMapping ("/")
     String Page(){
-        return "Bookstore page - coming soon."
+        return "Bookstore page - coming soon.";
     }
 }
 
