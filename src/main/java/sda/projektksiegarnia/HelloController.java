@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
     @RestController
     public class HelloController {
-        @GetMapping("/")
+        @GetMapping("/book")
         String hello() {
             return "Tu powinny pojawić się książki. Kiedyś uda nam się je dodać ;) ";
         }
