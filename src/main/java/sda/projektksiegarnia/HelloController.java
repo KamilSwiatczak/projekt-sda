@@ -14,6 +14,7 @@ public class HelloController {
     }
     @GetMapping("/books")
     public String getBooks() {
+
         return "books";
     }
 }
