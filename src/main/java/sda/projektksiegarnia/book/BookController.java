@@ -19,10 +19,11 @@ public class BookController {
         this.repository = repository;
     }
 
-    @RequestMapping
-    public List<Book> allBooks() {
-        return repository.findAll();
-    }
+
+//    @RequestMapping
+//    public List<Book> allBooks() {
+//        return repository.findAll();
+//    }
 
     @PostMapping
     @ResponseStatus(CREATED)
