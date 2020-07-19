@@ -8,9 +8,9 @@
 <table>
     <thead>
     <tr>
-        <th> id </th>
-        <th> Title </th>
-        <th> Author </th>
+        <th> isbn </th>
+        <th> Tytuł </th>
+        <th> Autor </th>
     </tr>
     </thead>
     <tbody>
@@ -18,7 +18,7 @@
         <td colspan="2"> Nie ma książek </td>
     </tr>
     <tr th:each="book : ${books}">
-        <td><span th:text="${book.id}"> Id </span></td>
+        <td><span th:text="${book.isbn}"> Isbn </span></td>
         <td><span th:text="${book.title}"> Tytuł </span></td>
         <td><span th:text="${book.author}"> Autor </span></td>
     </tr>
