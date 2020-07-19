@@ -1,4 +1,5 @@
 package sda.projektksiegarnia.book;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -6,27 +7,21 @@ import javax.persistence.Id;
 
 @Entity
 public class Book {
-
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String isbn;
     private String author;
     private String title;
 
-    protected Book() {}
+    protected Book() {
+    }
 
     public Book(String isbn, String author, String title) {
         this.isbn = isbn;
         this.author = author;
         this.title = title;
     }
-
-
-//    public Book(Long id, String isbn, String author, String title) {
-//    }
-//    
-//    Book book = new Book(id, isbn, author, title);
 
     @Override
     public String toString() {
@@ -39,7 +34,9 @@ public class Book {
         return id;
     }
 
-    public String getIsbn() { return isbn; }
+    public String getIsbn() {
+        return isbn;
+    }
 
     public String getAuthor() {
         return author;
