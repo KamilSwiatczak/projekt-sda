@@ -12,8 +12,5 @@ public class HelloController {
     public String get() {
         return "hello";
     }
-    @GetMapping("/all")
-    public String getBooks() {
-        return "books";
-    }
+
 }
