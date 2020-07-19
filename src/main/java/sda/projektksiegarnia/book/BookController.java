@@ -3,6 +3,8 @@ package sda.projektksiegarnia.book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 import static org.springframework.http.HttpStatus.CREATED;
 import static org.springframework.http.HttpStatus.NO_CONTENT;
 
@@ -19,9 +21,8 @@ public class BookController {
 
 
     @RequestMapping
-    public String allBooks() {
-        return "books";
-//        return repository.findAll();
+    public List<Book> allBooks() {
+        return repository.findAll();
     }
 
     @PostMapping
