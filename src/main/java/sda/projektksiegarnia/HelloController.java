@@ -1,15 +1,16 @@
 package sda.projektksiegarnia;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
-@RestController
+@Controller
 public class HelloController {
 
     @GetMapping("/")
-    String hello() {
-        return "WITAMY W NAJLEPSZEJ KSIĘGARNI NA ŚWIECIE!!!\n";
+    public String get() {
+        return "hello";
     }
 
 }
