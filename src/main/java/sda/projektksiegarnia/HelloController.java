@@ -12,9 +12,9 @@ public class HelloController {
     public String get() {
         return "hello";
     }
-    @GetMapping("/books")
-    public String getBooks() {
-
-        return "books";
-    }
+//    @GetMapping("/books")
+//    public String getBooks() {
+//
+//        return "books";
+//    }
 }
