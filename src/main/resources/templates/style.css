@@ -1,8 +1,6 @@
-h1 {
+body
+{
+    background: gray;
     font-family: Lato;
-    font-size: 22px;
-    font-style: italic;
-    font-weight: 100;
-    text-align: center;
-    text-decoration: aquamarine;
+    font-size: 20px;
 }
