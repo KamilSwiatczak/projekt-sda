@@ -19,7 +19,10 @@ public class BookController {
     public BookController(BookRepository repository) {
         this.repository = repository;
     }
-
+    @GetMapping("/all")
+    public String showAll(Model model) {
+        model.addAttribute("book", repository.findAll());
+        return "book";}
 
     @RequestMapping
     public List<Book> allBooks() {
@@ -38,9 +41,6 @@ public class BookController {
         repository.deleteAll();
     }
 
-    @GetMapping("/all")
-    public String showAll(Model model) {
-        model.addAttribute("book", repository.findAll());
-        return "books";
-    }
+
+
 }
