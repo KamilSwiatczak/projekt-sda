@@ -10,7 +10,7 @@ public class HelloController {
 
     @GetMapping("/")
     public String get() {
-        return "style";
+        return "index";
     }
 
 }
