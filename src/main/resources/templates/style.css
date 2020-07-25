@@ -1,11 +1,10 @@
 body {
-    font-family: "Open Sans", Open Sans, "Verdana", Verdana, Arial, sans;
+    font-family: Lato, serif;
 }
-
 
 .container {
     text-align: center;
-    margin: 80px auto 0px;
+    margin: 80px auto;
 
 }
 
