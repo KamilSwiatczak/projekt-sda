@@ -8,6 +8,8 @@
 <table>
     <thead>
     <tr>
+        <th> id </th>
+        <th> Isbn </th>
         <th> Title </th>
         <th> Author </th>
     </tr>
@@ -17,6 +19,8 @@
         <td colspan="2"> No Books Available </td>
     </tr>
     <tr th:each="book : ${books}">
+        <td><span th:text="${book.getId()}"> Title </span></td>
+        <td><span th:text="${book.getIsbn()}"> Title </span></td>
         <td><span th:text="${book.getTitle()}"> Title </span></td>
         <td><span th:text="${book.getAuthor()}"> Author </span></td>
     </tr>

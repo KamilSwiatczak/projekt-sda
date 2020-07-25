@@ -21,7 +21,7 @@ public class BookController {
         this.repository = repository;
     }
 
-    @GetMapping("/all")
+    @GetMapping
     public String showAll(Model model) {
         model.addAttribute("books", repository.findAll());
         return "book";
@@ -47,6 +47,6 @@ public class BookController {
     @GetMapping("/init")
     public String init(){
         repository.saveAll(List.of(new Book("2131231","ktoś","coś")));
-        return "redirect:/books/all";
+        return "redirect:/books";
     }
 }
