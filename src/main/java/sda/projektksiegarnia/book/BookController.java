@@ -1,6 +1,7 @@
 package sda.projektksiegarnia.book;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,7 +10,7 @@ import java.util.List;
 import static org.springframework.http.HttpStatus.CREATED;
 import static org.springframework.http.HttpStatus.NO_CONTENT;
 
-@RestController
+@Controller
 @RequestMapping("/books")
 public class BookController {
 
@@ -22,7 +23,7 @@ public class BookController {
 
     @GetMapping("/all")
     public String showAll(Model model) {
-        model.addAttribute("book", repository.findAll());
+        model.addAttribute("books", repository.findAll());
         return "book";
     }
 
@@ -43,5 +44,9 @@ public class BookController {
         repository.deleteAll();
     }
 
-
+    @GetMapping("/init")
+    public String init(){
+        repository.saveAll(List.of(new Book("2131231","ktoś","coś")));
+        return "redirect:/books/all";
+    }
 }

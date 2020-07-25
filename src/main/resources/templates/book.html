@@ -13,10 +13,10 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:if="${books.empty}">
+    <tr th:if="${books.isEmpty()}">
         <td colspan="2"> No Books Available </td>
     </tr>
-    <tr th:each="book : ${Book}">
+    <tr th:each="book : ${books}">
         <td><span th:text="${book.getTitle()}"> Title </span></td>
         <td><span th:text="${book.getAuthor()}"> Author </span></td>
     </tr>
