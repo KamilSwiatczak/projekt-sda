@@ -3,7 +3,9 @@ body {
     font-size: 15px;
     color:whitesmoke;
     text-align: center;
+
 }
+
 table, th, td {
     text-align: center;
     border: 1px solid black;
@@ -17,8 +19,6 @@ table.center {
     margin-left:auto;
     margin-right:auto;
 }
-
-
 
 
 p {
