@@ -46,7 +46,7 @@ public class BookController {
 
     @GetMapping("/init")
     public String init(){
-        repository.saveAll(List.of(new Book("2131231","ktoś","coś")));
+        repository.saveAll(List.of(new Book("2131231","ktoś","coś", 39L,"http://www.insignis.pl/wp-content/uploads/2018/03/NCDR_DIF_PL_cover_PL_front-1-723x1024.jpg")));
         return "redirect:/books";
     }
 }
